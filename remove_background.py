@@ -1,8 +1,9 @@
 from rembg import remove
 from PIL import Image
+import asyncio
 
 
-def remove_back(input_path, output_path):
+async def remove_back(input_path, output_path):
     open_image = Image.open(input_path)
     done = remove(open_image)
     done.save(output_path)
